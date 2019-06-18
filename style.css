@@ -1,0 +1,149 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway);
+
+/*Background - Start*/
+
+html,
+body {
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+}
+
+
+/*Background - End*/
+
+
+/*Title - Start*/
+
+#topbar {
+    display: flex;
+    height: 60px;
+}
+
+#title {
+    color: #295f48;
+    font-family: Raleway, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: right;
+    text-transform: uppercase;
+    flex: 1 0 auto;
+    padding-right: 50px;
+    margin-top: 15px;
+}
+
+
+/*Title - End*/
+
+
+/*Nav Bar - Start*/
+
+#cssmenu,
+#cssmenu ul,
+#cssmenu ul li,
+#cssmenu ul li a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    line-height: 1;
+    display: block;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#cssmenu:after,
+#cssmenu>ul:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+#cssmenu {
+    width: auto;
+    border-bottom: 3px solid #204c39;
+    font-family: Raleway, sans-serif;
+    line-height: 1;
+}
+
+#cssmenu>ul>li {
+    float: left;
+}
+
+#cssmenu.align-center>ul {
+    font-size: 0;
+    text-align: center;
+}
+
+#cssmenu.align-center>ul>li {
+    display: inline-block;
+    float: none;
+}
+
+#cssmenu.align-right>ul>li {
+    float: right;
+}
+
+#cssmenu.align-right>ul>li>a {
+    margin-right: 0;
+    margin-left: -4px;
+}
+
+#cssmenu>ul>li>a {
+    z-index: 2;
+    padding: 18px 25px 12px 25px;
+    font-size: 30px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #a6a6a6;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    margin-right: -4px;
+}
+
+#cssmenu>ul>li.active>a,
+#cssmenu>ul>li:hover>a,
+#cssmenu>ul>li>a:hover {
+    color: #ffffff;
+}
+
+#cssmenu>ul>li>a:after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    height: 120%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    content: "";
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+    -webkit-transform: perspective(5px) rotateX(2deg);
+    -webkit-transform-origin: bottom;
+    -moz-transform: perspective(5px) rotateX(2deg);
+    -moz-transform-origin: bottom;
+    transform: perspective(5px) rotateX(2deg);
+    transform-origin: bottom;
+}
+
+#cssmenu>ul>li.active>a:after,
+#cssmenu>ul>li:hover>a:after,
+#cssmenu>ul>li>a:hover:after {
+    background: #204c39;
+}
+
+
+/*Nav Bar - End*/
