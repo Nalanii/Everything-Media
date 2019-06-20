@@ -3,7 +3,7 @@
 
 <head>
     <title>
-        Everything Media - Movies
+        Everything Media
     </title>
     <link rel="shortcut icon" href="/Style/Images/favi.png" />
     <link rel="stylesheet" href="/Style/style.css">
@@ -29,24 +29,23 @@
     </div>
     <!--/Navigation Bar-->
 
-    <!--Search Bar-->
-    <div class="container">
-        <form id="searchForm">
-            <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
-        </form>
-    </div>
 
     <div class="container">
-        <div id="movies" class="row"></div>
+        <div id="movie" class="well"></div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/Javascript/movies.js"></script>
-    <script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script type="text/javascript" src="Javascript/movies.js"></script>
+    <script type="text/javascript">
         getMovie();
     </script>
-    <!--/Search Bar-->
+
+
+
 </body>
 
 </html>
