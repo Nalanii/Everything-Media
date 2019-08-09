@@ -14,4 +14,10 @@
 
 #searchForm {
     padding-top: 50px;
+    display: flex;
+}
+
+#searchBtn {
+    width: 200px;
+    color: black;
 }

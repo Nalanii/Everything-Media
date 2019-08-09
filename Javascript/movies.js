@@ -7,50 +7,46 @@ $(document).ready(() => {
 });
 
 function getMovies(searchText) {
-    $.get("http://www.omdbapi.com/?s=" + searchText + "&type=movie&apikey=16c987d3")
-        .then(function(response) {
-            var moviesString = JSON.stringify(response);
-            var data = JSON.parse(moviesString);
-            var output = "";
-            console.log("sup");
+    if (searchText != undefined) {
+        $.get("http://www.omdbapi.com/?s=" + searchText + "&type=movie&apikey=16c987d3")
+            .then(function(response) {
+                var moviesString = JSON.stringify(response);
+                var data = JSON.parse(moviesString);
+                var output = "";
 
-            for (index = 0; index < data.Search.length; index++) {
-                output += `
-                <div class="col-md-3">
-                  <div class="well text-center">
-                    <img src="${data.Search[index].Poster}">
-                    <h5>${data.Search[index].Title}</h5>
-                    <a onclick="movieSelected('${data.Search[index].movieId}')" class="btn btn-primary" href="#">Movie Details</a>
-                    <a onclick="movieSelected('${data.Search[index].movieId}')" class="btn btn-primary" href="#">Add to List</a>
-                  </div>
-                </div>
-                `;
-            }
-            $('#movies').html(output);
-        })
-        .catch(function(err) {
-            alert(err)
-        });
+                for (index = 0; index < data.Search.length; index++) {
+                    output += `
+                    <div class="col-md-3">
+                    <div class="well text-center">
+                        <img src="${data.Search[index].Poster}">
+                        <h5>${data.Search[index].Title}</h5>
+                        <a onclick="movieSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Movie Details</a>
+                        <a onclick="movieSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Add to List</a>
+                    </div>
+                    </div>
+                    `;
+                }
+                $('#movies').html(output);
+            })
+            .catch(function(err) {
+                alert(err)
+            });
+    }
 }
 
 function movieSelected(id) {
-    alert("in movieSelected");
-    sessionStorage.setItem('movieId', id);
-    alert(sessionStorage.getItem('movieId'));
+    sessionStorage.setItem('imdbID', id);
     window.location = 'MovieDetails.html';
     return false;
 }
 
 function getMovie() {
-    var movieId = sessionStorage.getItem('movieId');
-
-    $.get('http://www.omdbapi.com?i=' + movieId)
-        .then((response) => {
-            console.log(response);
+    var id = sessionStorage.getItem('imdbID');
+    $.get("http://www.omdbapi.com/?i=" + id + "&apikey=16c987d3")
+        .then(function(response) {
             var movieString = JSON.stringify(response);
             var data = JSON.parse(movieString);
-
-            let output = `
+            output = `
           <div class="row">
             <div class="col-md-4">
               <img src="${data.Poster}" class="thumbnail">
@@ -74,14 +70,13 @@ function getMovie() {
               ${data.Plot}
               <hr>
               <a href="http://imdb.com/title/${data.imdbID}" target="_blank" class="btn btn-primary">View IMDB</a>
-              <a href="index.html" class="btn btn-default">Go Back To Search</a>
+              <a href="Movies.html" class="btn btn-default">Go Back To Search</a>
             </div>
           </div>
         `;
-
             $('#movie').html(output);
         })
         .catch((err) => {
-            alert(err)
+            alert(str(err));
         });
 }
