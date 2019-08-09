@@ -1,7 +1,7 @@
 $(document).ready(() => {
     $('#searchForm').on('submit', (e) => {
         let searchText = $('#searchText').val();
-        getMovies(searchText);
+        getShows(searchText);
         e.preventDefault();
     });
 });
@@ -22,21 +22,21 @@ function getShows(searchText) {
                     <div class="well text-center">
                         <img src="${data.Search[index].Poster}">
                         <h5>${data.Search[index].Title}</h5>
-                        <a onclick="movieSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Show Details</a>
-                        <a onclick="movieSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Add to List</a>
+                        <a onclick="showSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Show Details</a>
+                        <a onclick="showSelected('${data.Search[index].imdbID}')" class="btn btn-primary" href="#">Add to List</a>
                     </div>
                     </div>
                     `;
                 }
-                $('#movies').html(output);
+                $('#tvShows').html(output);
             })
             .catch(function(err) {
-                alert(err)
+                alert(err);
             });
     }
 }
 
-function movieSelected(id) {
+function showSelected(id) {
     sessionStorage.setItem('imdbID', id);
     window.location = 'Movie&TVDetails.html';
     return false;

@@ -29,7 +29,7 @@ function getMovies(searchText) {
                 $('#movies').html(output);
             })
             .catch(function(err) {
-                alert(err)
+                alert(err);
             });
     }
 }
