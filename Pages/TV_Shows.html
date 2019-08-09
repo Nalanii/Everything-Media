@@ -7,6 +7,8 @@
     </title>
     <link rel="shortcut icon" href="/Style/Images/favi.png" />
     <link rel="stylesheet" href=/Style/style.css ">
+    <link rel="stylesheet " href="/Style/tv.css ">
+    <link rel="stylesheet " href="/Style/bootstrap.min.css ">
 </head>
 
 <body>
@@ -26,9 +28,25 @@
         <p id='title'>Everything Media</p>
     </div>
     <!--/Navigation Bar-->
-    <p>
-        <h1 style="color:white; ">TV Shows</h1>
-    </p>
+
+     <!--Search Bar-->
+    <div class="container ">
+        <form id="searchForm ">
+            <input type="text " class="form-control " id="searchText " placeholder="Search TV Shows... ">
+            <button onclick="getShows() " id="searchBtn ">Search</button>
+        </form>
+    </div>
+    <!--/Search Bar-->
+
+    <!--Dynamic show results-->
+    <div class="container ">
+        <div id="tvShows " class="row "></div>
+    </div>
+    <!--/Dynamic show results-->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js " integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin=" anonymous "></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+    <script src="/Javascript/tv.js "></script>
 </body>
 
 </html>
