@@ -5,7 +5,10 @@
     <title>
         Everything Media
     </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="/Style/Images/favi.png" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Style/style.css">
     <link rel="stylesheet" href="/Style/homepage.css">
 
@@ -14,9 +17,12 @@
 
 <body>
     <!--Navigation Bar-->
-    <div id=topbar>
-        <div id='cssmenu'>
-            <ul>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/Pages/Home.html">Everything Media</a>
+            </div>
+            <ul class="nav navbar-nav">
                 <li class='active'><a href='/Pages/Home.html'>Home</a></li>
                 <li><a href='/Pages/My_List.html'>My List</a></li>
                 <li><a href='/Pages/Books.html'>Books</a></li>
@@ -26,33 +32,41 @@
                 <li><a href='/Pages/Archived.html'>Archived</a></li>
             </ul>
         </div>
-        <p id='title'>Everything Media</p>
-    </div>
+    </nav>
     <!--/Navigation Bar-->
 
     <!--Image Grid-->
-    <div id="grid">
+    <div id="container">
         <div class="row ">
-            <div class="column ">
+            <div class="col-sm-4">
                 <a href='/Pages/My_List.html'>
-                    <img src="/Style/Images/my_list.svg "> My List
+                    <img src="/Style/Images/my_list.svg ">
+                    <p>My List</p>
                 </a>
                 <a href='/Pages/Archived.html'>
-                    <img src="/Style/Images/archived.svg ">Archived
+                    <img src="/Style/Images/archived.svg ">
+                    <p>Archived</p>
                 </a>
             </div>
-            <div class="column ">
+            <div class="col-sm-4">
                 <a href='/Pages/Books.html'>
-                    <img src="/Style/Images/books.svg ">Books</a>
+                    <img src="/Style/Images/books.svg ">
+                    <p>Books</p>
+                </a>
                 <a href='/Pages/Movies.html'>
-                    <img src="/Style/Images/movies.svg ">Movies</a>
+                    <img src="/Style/Images/movies.svg ">
+                    <p>Movies</p>
+                </a>
 
             </div>
-            <div class="column ">
+            <div class="col-sm-4">
                 <a href='/Pages/TV_Shows.html'>
-                    <img src="/Style/Images/tv_shows.svg "> TV Shows</a>
+                    <img src="/Style/Images/tv_shows.svg ">
+                    <p>TV Shows</p>
+                </a>
                 <a href='/Pages/Anime.html'>
-                    <img src="/Style/Images/anime.svg "> Anime
+                    <img src="/Style/Images/anime.svg ">
+                    <p>Anime</p>
                 </a>
             </div>
         </div>
