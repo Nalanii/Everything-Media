@@ -1,46 +1,21 @@
 /*Image Grid - Start*/
 
-#grid {
-    text-align: center;
-    font-size: 30px;
-}
-
 img {
-    height: 25%;
-    margin-bottom: 20px;
+    height: 23%;
+    margin-top: 8px;
+    width: 100%;
 }
 
 .row {
     display: flex;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.column {
-    flex: 25%;
-    max-width: 33%;
-    padding: 0 4px;
-}
-
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    width: 100%;
-}
-
-@media screen and (max-width: 800px) {
-    .column {
-        flex: 50%;
-        max-width: 50%;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        flex: 100%;
-        max-width: 100%;
-    }
+p {
+    text-align: center;
 }
 
 

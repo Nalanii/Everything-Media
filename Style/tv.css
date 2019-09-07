@@ -1,0 +1,19 @@
+#tvShows img {
+    width: 100%;
+}
+
+@media(min-width:960px) {
+    #tvShows .col-md-3 img {
+        height: 240px;
+    }
+}
+
+#searchForm {
+    padding-top: 50px;
+    display: flex;
+}
+
+#searchBtn {
+    width: 200px;
+    color: black;
+}

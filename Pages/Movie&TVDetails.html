@@ -3,11 +3,13 @@
 
 <head>
     <title>
-        Everything Media - Books
+        Everything Media
     </title>
     <link rel="shortcut icon" href="/Style/Images/favi.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href=/Style/style.css ">
+    <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/bootstrap.min.css">
+    <link rel="stylesheet" href="/Style/movies.css">
 </head>
 
 <body>
@@ -20,8 +22,8 @@
             <ul class="nav navbar-nav ">
                 <li><a href='/Pages/Home.html'>Home</a></li>
                 <li><a href='/Pages/My_List.html'>My List</a></li>
-                <li class='active'><a href='/Pages/Books.html'>Books</a></li>
-                <li><a href='/Pages/Movies.html'>Movies</a></li>
+                <li><a href='/Pages/Books.html'>Books</a></li>
+                <li class='active'><a href='/Pages/Movies.html'>Movies</a></li>
                 <li><a href='/Pages/TV_Shows.html'>TV Shows</a></li>
                 <li><a href='/Pages/Anime.html'>Anime</a></li>
                 <li><a href='/Pages/Archived.html'>Archived</a></li>
@@ -29,9 +31,24 @@
         </div>
     </nav>
     <!--/Navigation Bar-->
-    <p>
-        <h1 style="color:white; ">Books</h1>
-    </p>
+
+    <!--Dynamic Results-->
+    <div class="container">
+        <div id="movie" class="well">
+        </div>
+    </div>
+    <!--/Dynamic Results-->
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/Javascript/movies.js"></script>
+    <script>
+        getMovie();
+    </script>
+
+
+
 </body>
 
 </html>
