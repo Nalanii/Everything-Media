@@ -3,12 +3,12 @@
 
 <head>
     <title>
-        Everything Media - Movies
+        Everything Media
     </title>
     <link rel="shortcut icon" href="/Style/Images/favi.png" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/Style/bootstrap.min.css">
     <link rel="stylesheet" href="/Style/style.css">
+    <link rel="stylesheet" href="/Style/bootstrap.min.css">
     <link rel="stylesheet" href="/Style/movies.css">
 </head>
 
@@ -32,24 +32,23 @@
     </nav>
     <!--/Navigation Bar-->
 
-    <!--Search Bar-->
+    <!--Dynamic Results-->
     <div class="container">
-        <form id="searchForm">
-            <input type="text" class="form-control" id="searchText" placeholder="Search Movies...">
-            <button onclick="getMovies()" id="searchBtn">Search</button>
-        </form>
+        <div id="show" class="well">
+        </div>
     </div>
-    <!--/Search Bar-->
+    <!--/Dynamic Results-->
 
-    <!--Dynamic movie results-->
-    <div class="container">
-        <div id="movies" class="row"></div>
-    </div>
-    <!--/Dynamic movie results-->
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="/Javascript/movies.js"></script>
+    <script src="/Javascript/tv.js"></script>
+    <script>
+        getShow();
+    </script>
+
+
+
 </body>
 
 </html>
