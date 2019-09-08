@@ -1,8 +1,12 @@
-#tvShows img {
+#tvShows img,
+#movie img {
     width: 100%;
 }
 
 @media(min-width:960px) {
+    #tvShows .col-md-3 .well {
+        height: 390px;
+    }
     #tvShows .col-md-3 img {
         height: 240px;
     }

@@ -36,7 +36,7 @@ function getMovies(searchText) {
 
 function movieSelected(id) {
     sessionStorage.setItem('imdbID', id);
-    window.location = 'Movie&TVDetails.html';
+    window.location = 'Movie_Details.html';
     return false;
 }
 
