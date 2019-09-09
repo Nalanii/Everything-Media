@@ -1,13 +1,13 @@
-#tvShows img,
-#show img {
+#books img,
+#book img {
     width: 100%;
 }
 
 @media(min-width:960px) {
-    #tvShows .col-md-3 .well {
+    #books .col-md-3 .well {
         height: 390px;
     }
-    #tvShows .col-md-3 img {
+    #books .col-md-3 img {
         height: 240px;
     }
 }
